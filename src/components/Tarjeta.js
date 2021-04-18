@@ -4,7 +4,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import Rating from '@material-ui/lab/Rating';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
     
 const useStyles = makeStyles({
@@ -52,11 +53,18 @@ return (
                         <Typography className={classes.pos} color="textSecondary">
                             {type}
                         </Typography>
+                        <Rating
+                            name="simple-controlled"
+                            value={rating}
+                           
+                        />
                     </div>
                     <div>
                         <Typography className={classes.pos} color="textSecondary">
                             ${price}
                         </Typography>
+                        <ShoppingCartIcon/>
+                      
 
                     </div>
                 </div>
