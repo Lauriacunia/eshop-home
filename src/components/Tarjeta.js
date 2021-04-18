@@ -14,6 +14,13 @@ const useStyles = makeStyles({
     media: {
       height: 250,
     },
+    pos: {
+        marginBottom: 12,
+      },
+    details: {
+    display: 'flex',
+    justify: 'space-around'
+    },
   });
     
 const Tarjeta = ({ title, type, price, img, rating, isAvailable, onSale }) => {
@@ -37,9 +44,23 @@ return (
                 image={img}
             />
             <CardContent>
-                <Typography variant="h5" component="h2">
-                    {title}
-                </Typography>
+                <div className={classes.details}>
+                    <div>
+                        <Typography variant="h5" component="h2">
+                        {title}
+                        </Typography>
+                        <Typography className={classes.pos} color="textSecondary">
+                            {type}
+                        </Typography>
+                    </div>
+                    <div>
+                        <Typography className={classes.pos} color="textSecondary">
+                            ${price}
+                        </Typography>
+
+                    </div>
+                </div>
+               
             </CardContent>
             
         </Card>
