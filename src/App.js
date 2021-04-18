@@ -1,8 +1,18 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Tarjeta from "./components/Tarjeta";
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import Filtro from "./components/Filtro";
+import NavBar from "./components/NavBar";
 
+const useStyles = makeStyles({
+  pos: {
+      marginBottom: 12,
+    },
 
+});
 
 const App = () => {
 
@@ -79,11 +89,24 @@ const App = () => {
     },
   ];
 
+
+  const classes = useStyles();
+
+
   return (
-    <div className="App">
-      
-      <Grid container  spacing={2}>
-        <Grid item xs={4}>Filtros</Grid>
+    <Container>
+
+      <NavBar/>
+
+      <Grid 
+        container  
+        spacing={3}
+        direction="row"
+        justify="space-around"
+        alignItems="flex-start">
+          
+        <Filtro/>
+
         {
             products.map((producto, index) => {
               return <Tarjeta
@@ -100,8 +123,7 @@ const App = () => {
           }     
             
         </Grid> 
-      
-    </div>
+    </Container>
   );
 }
 

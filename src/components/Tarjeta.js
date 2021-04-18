@@ -13,7 +13,7 @@ const useStyles = makeStyles({
       maxWidth: 345,
     },
     media: {
-      height: 250,
+      height: 230,
     },
     pos: {
         marginBottom: 12,
@@ -36,7 +36,7 @@ const classes = useStyles();
 
 return (
     
-    <Grid item xs={4}>
+    <Grid item xs={3}>
         <Card
             className={classes.root}
             key={title}>
@@ -48,10 +48,10 @@ return (
                 <div className={classes.details}>
                     <div>
                         <Typography variant="h5" component="h2">
-                        {title}
+                            {title}
                         </Typography>
                         <Typography className={classes.pos} color="textSecondary">
-                            {type}
+                            {type.toUpperCase()}
                         </Typography>
                         <Rating
                             name="simple-controlled"
