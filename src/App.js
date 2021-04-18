@@ -83,24 +83,23 @@ const App = () => {
     <div className="App">
       
       <Grid container  spacing={2}>
-        <Grid item xs={4}>Filtros
-        </Grid>
+        <Grid item xs={4}>Filtros</Grid>
         {
-          products.map((producto, index) => {
-            return <Tarjeta
-              key={index}
-              title={producto.title} 
-              type = {producto.type}
-              price = {producto.price}
-              img={producto.img}
-              rating= {producto.rating}
-              isAvailable = {producto.isAvailable}
-              onSale = {producto.onSale}
-              />
-          })
-        }       
-      </Grid>
-   
+            products.map((producto, index) => {
+              return <Tarjeta
+                key={index}
+                title={producto.title} 
+                type = {producto.type}
+                price = {producto.price}
+                img={producto.img}
+                rating= {producto.rating}
+                isAvailable = {producto.isAvailable}
+                onSale = {producto.onSale}
+                />
+            })
+          }     
+            
+        </Grid> 
       
     </div>
   );
