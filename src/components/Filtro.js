@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: 300,
     },
+    pos: {
+        marginBottom: 12,
+      },
     heading: {
       fontSize: theme.typography.pxToRem(15),
       fontWeight: theme.typography.fontWeightRegular,
@@ -34,12 +37,11 @@ const classes = useStyles();
 
     return (
     <Card className={classes.root}>
-
-        <Grid item xs={4}>
-            <Typography className={classes.pos} color="textSecondary">
-                FILTER BY
-            </Typography>
-        </Grid>
+        
+        <Typography className={classes.pos} color="textSecondary">
+            FILTER BY
+        </Typography>
+       
 
         <Accordion>
             <AccordionSummary

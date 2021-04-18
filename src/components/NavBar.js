@@ -16,8 +16,10 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
+ 
   grow: {
     flexGrow: 1,
+    marginBottom: 20,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -174,7 +176,7 @@ const NavBar = () => {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            HOME  
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

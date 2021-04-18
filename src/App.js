@@ -95,35 +95,39 @@ const App = () => {
 
   return (
     <Container>
-
       <NavBar/>
+      
+        
 
-      <Grid 
-        container  
-        spacing={3}
-        direction="row"
-        justify="space-around"
-        alignItems="flex-start">
-          
-        <Filtro/>
-
-        {
-            products.map((producto, index) => {
-              return <Tarjeta
-                key={index}
-                title={producto.title} 
-                type = {producto.type}
-                price = {producto.price}
-                img={producto.img}
-                rating= {producto.rating}
-                isAvailable = {producto.isAvailable}
-                onSale = {producto.onSale}
-                />
-            })
-          }     
+        <Grid 
+          container  
+          spacing={3}
+          direction="row"
+          justify="space-around"
+          alignItems="flex-start">
             
-        </Grid> 
-    </Container>
+          <Grid item xs={3}>
+            <Filtro/>
+          </Grid>
+          
+
+          {
+              products.map((producto, index) => {
+                return <Tarjeta
+                  key={index}
+                  title={producto.title} 
+                  type = {producto.type}
+                  price = {producto.price}
+                  img={producto.img}
+                  rating= {producto.rating}
+                  isAvailable = {producto.isAvailable}
+                  onSale = {producto.onSale}
+                  />
+              })
+            }     
+              
+          </Grid> 
+      </Container>
   );
 }
 
